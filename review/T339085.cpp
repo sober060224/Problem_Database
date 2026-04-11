@@ -2,7 +2,7 @@
 using namespace std;
 #define ll long long
 
-void showmap(map<ll, ll, greater<ll>> &area)  
+void showmap(map<ll, ll, greater<ll>> &area)
 {
     cout << "--------------------------------" << endl;
     for (pair<ll, ll> t : area)
@@ -11,14 +11,13 @@ void showmap(map<ll, ll, greater<ll>> &area)
 
 void showve(vector<ll> &a)
 {
-   for (ll i = 1; i < a.size(); i++)  
-       cout << a[i] << ' ';
-   cout << endl;
+    for (ll i = 1; i < a.size(); i++)
+        cout << a[i] << ' ';
+    cout << endl;
 }
 
 void solve()
 {
-    
 }
 
 int main()
@@ -26,7 +25,7 @@ int main()
     ios::sync_with_stdio(false);
     cin.tie(0), cout.tie(0);
 
-    map<ll, ll, greater<ll>> area;  
+    map<ll, ll, greater<ll>> area;
     ll n, m, k;
     cin >> n >> m >> k;
     for (ll i = 0; i < n; i++)
@@ -74,3 +73,4 @@ int main()
 
     return 0;
 }
+

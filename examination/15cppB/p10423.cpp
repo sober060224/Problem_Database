@@ -33,8 +33,10 @@ void ans(string a, string b)
 
 void solve()
 {
-    int l = 343720, w = 233333, t = l / 2;
-    double ans = sqrt(t * t + w * w) * 4;
+    ll l = 343720, w = 233333, ggcd = 3305, t = l / 2;
+    ll i = 15 * w / ggcd * 2 * l, j = 17 * l / ggcd * 2 * w;
+    cout << fixed << setprecision(2) << sqrt(i * i + j * j);
+    // double ans = sqrt(t * t + w * w) * 4;
     // cout << ans << endl;
     // cout << fixed << setprecision(2) << ans;
 }
@@ -46,8 +48,10 @@ int main()
 
     // n-1 + (n - 2) + ... + 1 - (6 + 5 + ... + 1)
     string a = "1204";
+    string b = "1100325199.77";
     // test();
-    solve();
+    // solve();
+    ans(a, b);
 
     return 0;
 }

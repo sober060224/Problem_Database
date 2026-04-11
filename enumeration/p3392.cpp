@@ -170,7 +170,6 @@ int main()
         b[i] = b[i - 1] + solve(matrix[i], 'B');
         r[i] = r[i - 1] + solve(matrix[i], 'R');
     }
-
     int ans = INT_MAX;
     for (int i = 1; i < N; i++)
         for (int j = i + 1; j < N; j++)

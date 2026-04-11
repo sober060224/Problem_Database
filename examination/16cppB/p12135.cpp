@@ -4,8 +4,8 @@ using namespace std;
 using namespace chrono;
 #define ll long long
 
-void Init(std::vector<std::vector<int>> &dis, int n, bool &ok, 
-          std::vector<std::string> &river, int &l, int &r, 
+void Init(std::vector<std::vector<int>> &dis, int n, bool &ok,
+          std::vector<std::string> &river, int &l, int &r,
           std::deque<std::pair<int, int>> &d);
 
 void showve(vector<string> &a)
@@ -51,15 +51,14 @@ void solve(vector<string> &river)
         visited[x][y] = true;
         for (int i = 0; i < 3; i++)
         {
-            int newx = x + dx[i], newy = y + dy[i];
-            if (newx < 1 || newx > 2 || newy > r)
+            int nx = x + dx[i], ny = y + dy[i], w = river[nx][ny] == '.' ? 1 : 0;
+            if (nx < 1 || nx > 2 || ny > r || dis[x][y] + w >= dis[nx][ny])
                 continue;
-            int w = river[newx][newy] == '.' ? 1 : 0;
-            dis[newx][newy] = min(dis[x][y] + w, dis[newx][newy]);
+            dis[nx][ny] = dis[x][y] + w;
             if (!w)
-                d.push_front({newx, newy});
+                d.push_front({nx, ny});
             else
-                d.push_back({newx, newy});
+                d.push_back({nx, ny});
         }
     }
 
