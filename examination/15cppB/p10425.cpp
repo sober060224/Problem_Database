@@ -46,7 +46,7 @@ int main()
             a[j + 1] += a[j] / 10;
             a[j] %= 10;
         }
-        if (a[length - 1] > 10)
+        if (a[length - 1] >= 10)
         {
             a.push_back(a[length - 1] / 10);
             a[length - 1] %= 10;
@@ -63,7 +63,7 @@ int main()
             a[j + 1] += a[j] / 10;
             a[j] %= 10;
         }
-        if (a[length - 1] > 10)
+        if (a[length - 1] >= 10)
         {
             a.push_back(a[length - 1] / 10);
             a[length - 1] %= 10;
